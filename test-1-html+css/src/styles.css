@@ -1,0 +1,171 @@
+/* Reset default CSS */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {  
+  margin: 0;  
+  padding: 0;  
+  border: 0;  
+  font-size: 100%;  
+  font: inherit;  
+  vertical-align: baseline; 
+}
+
+body {
+  background-color: #F8F9FA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "DM Sans";
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 116px;
+  margin-bottom: 180px;
+  width: 100%;
+  max-width: 1080px;
+  gap: 56px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  color: #0A0A0A;
+  text-align: center;
+  max-width: 528px;
+  width: 100%;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.header h1{
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -1.44px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.header div {
+  color: #404040;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.198px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: url("./images/world-map-desctop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+}
+
+.image {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-mobile {
+  display: none;
+  object-fit: contain;
+  width: 100%;
+}
+
+.cards {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(6, 1fr);
+  padding-top: 500px;
+}
+
+.cards .card {
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 0px 40px 0px rgba(44, 59, 64, 0.15);
+  padding: 24px;
+}
+
+.cards .card:first-child {
+  grid-column: span 3;
+}
+
+.cards .card:nth-child(2) {
+  grid-column: 4 / span 3;
+}
+
+.cards .card:nth-child(n+3) {
+  grid-column: span 2;
+}
+
+.card {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  gap: 12px;
+  color: #0A0A0A;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.198px;
+  overflow: hidden;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.card-title div {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.588px;
+  overflow: hidden;
+}
+
+.card-contacts {
+  overflow: hidden;
+}
+
+.card-address {
+  color: #9E9E9E;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin: 48px 40px;
+    width: calc(100% - 80px);
+    gap: 40px;
+  }
+  
+  .image-mobile {
+    display: block;
+  }
+
+  .content {
+    background-image: none;
+    gap: 40px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 0;
+  }
+}
